@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sleeper" android:icon="@drawable/clock"
+        android:title="Sleeper time" />
+    <item android:id="@+id/car" android:icon="@drawable/carlayout_new"
+        android:title="car mode" />
+
+</menu>

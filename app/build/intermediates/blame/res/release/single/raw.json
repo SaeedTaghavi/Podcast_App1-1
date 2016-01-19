@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/res/merged/release/raw/tw__cacerts",
+        "source": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.6.2/res/raw/tw__cacerts"
+    },
+    {
+        "merged": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/res/merged/release/raw/gtm_analytics",
+        "source": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/res/raw/gtm_analytics"
+    }
+]

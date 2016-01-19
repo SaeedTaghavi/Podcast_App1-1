@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/test"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#bb000000" >
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textStyle="bold"
+            android:textSize="@dimen/fourteen_dp"
+            android:textColor="#ccffffff"
+            android:layout_marginLeft="@dimen/two_dp"/>
+
+
+            <TextView
+                android:id="@+id/textContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/two_dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Large Text"
+               android:textSize="@dimen/eleven_dp"
+                android:textColor="#ccffffff"
+                android:layout_below="@+id/textTitle"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/textContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/two_dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/textContent"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:text="Large Text"
+                android:textSize="@dimen/eleven_dp"
+                android:textColor="#ccffffff"
+                android:singleLine="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

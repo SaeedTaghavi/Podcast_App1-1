@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg11">
+
+    <include layout="@layout/header_middle_text"
+        android:id="@+id/layout_header"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"/>
+
+    <GridView
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/layout_header"
+        android:numColumns="3"
+        android:gravity="center"
+        android:columnWidth="150dp"
+        android:stretchMode="columnWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/categoryGrid"
+        />
+
+</RelativeLayout>

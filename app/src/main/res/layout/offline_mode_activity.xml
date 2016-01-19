@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/offlinebackground"
+    tools:context="e.aakriti.work.podcast_app.OffLineModeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:text="@string/offLineMode"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/offLineMode"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/offLineMode"
+        android:layout_marginTop="3dp"
+        android:text="@string/downloadedEpisodes"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/offLineMode"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/dotted_line"
+        android:layout_margin="20dp"
+        android:layerType="software"
+        android:text="test"/>
+</RelativeLayout>

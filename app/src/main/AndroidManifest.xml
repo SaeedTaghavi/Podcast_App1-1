@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="e.aakriti.work.podcast_app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <receiver android:name="e.aakriti.work.breceiver.ConnectionChangeBroadCastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="e.aakriti.work.podcast_app.SENDBROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".SplashActvity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+            android:name=".CategoriesActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filterandroid:theme="@style/Theme.AppCompat.NoActionBar">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".CategoryEpisodeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".CategoriesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".QuestionListingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!--
+        <activity
+            android:name=".SplashActvity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.projectemplate.musicpro.activity.SongListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.projectemplate.musicpro.activity.DownloadUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service android:name="com.projectemplate.musicpro.service.MusicService" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="17887ee8954e7cdb25df336a9a4f7332506ecf1b" />
+
+        <activity
+            android:name=".User_details"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".OffLineModeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Favourites"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".Search" >
+        </activity>
+        <activity android:name=".Who_To_Follow" >
+        </activity>
+        <activity android:name=".PlayList" >
+        </activity>
+    </application>
+
+</manifest>

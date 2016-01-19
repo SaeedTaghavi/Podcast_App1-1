@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/menu_width"
+    android:layout_height="@dimen/menu_width"
+    android:gravity="center" 
+    android:padding="@dimen/lib_padding_right">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/slider_img_width"
+        android:layout_alignParentBottom="true"
+        android:background="#bb000000" >
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textSize="@dimen/seventeen_dp"
+            android:textColor="#ccffffff"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@+id/textTitle"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textSize="@dimen/thirteen_dp"
+            android:textColor="#ccffffff"/>
+
+            <TextView
+                android:id="@+id/textContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textContent"
+                android:layout_weight="1"
+                android:layout_marginTop="-1dp"
+                android:singleLine="true"
+                android:gravity="right"
+                android:text="Large Text"
+                android:textSize="@dimen/twelve_dp"
+                android:textColor="#ccffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>

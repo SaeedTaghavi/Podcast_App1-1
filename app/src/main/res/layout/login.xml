@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+
+
+
+
+    <FrameLayout android:id="@+id/FrameLayout2"
+        android:layout_width="@dimen/Connect_with_button_width"
+        android:layout_height="@dimen/connect_with_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/Frame_layout_on_login_activity">
+
+        <com.digits.sdk.android.DigitsAuthButton
+            android:id="@+id/auth_button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"/>
+        <Button android:id="@+id/connectWithPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#336699"
+            android:text="@string/connect_with_phone"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:drawableLeft="@drawable/phoneloginbutton"
+            android:textAllCaps="false"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/facebookFrame"
+        android:layout_width="@dimen/Connect_with_button_width"
+        android:layout_height="@dimen/connect_with_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="@dimen/Login_button_gap">
+
+        <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebookLogInButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/fbConnectButton"
+        android:layout_width="@dimen/Connect_with_button_width"
+        android:layout_height="@dimen/connect_with_button_height"
+        android:drawableLeft="@drawable/fbloginbuttonicon"
+        android:drawablePadding="-2dp"
+        android:text="Connect with Facebook"
+        android:background="#3b5998"
+        android:textColor="#ffffff" 
+        android:layout_below="@+id/linearLayout1"
+        android:textAllCaps="false" />
+    </FrameLayout>
+    
+     <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FrameLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/header_search_icon_height"
+        android:layout_marginRight="@dimen/header_search_icon_height"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:weightSum="10"
+         android:layout_marginTop="@dimen/Linear_layout_inbetween_connect_buttons_on_login_activity">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:background="@android:color/white"
+            android:orientation="vertical" />
+            <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:gravity="center"
+                 android:text="or"
+                 android:textColor="@android:color/white" />
+
+            <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="2dp"
+                 android:layout_gravity="center"
+                 android:layout_weight="4"
+                 android:background="@android:color/white"
+                 android:orientation="vertical" >
+            </LinearLayout>
+     </LinearLayout>
+
+
+       
+
+   
+   <!-- <Button
+        android:id="@+id/fbConnectButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/fbloginbuttonicon"
+        android:drawablePadding="14dp"
+        android:text="Connect with Facebook"
+        android:background="#3b5998"
+        android:textColor="#ffffff" 
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentCenter="true"
+        android:layout_centerHorizontal="true"/> -->
+    <FrameLayout
+        android:id="@+id/googleFrame"
+        android:layout_width="@dimen/Connect_with_button_width"
+        android:layout_height="@dimen/connect_with_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/facebookFrame"
+        android:layout_marginTop="@dimen/Login_button_gap">
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleLogInButon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/googlePlusConnectButton"
+        android:drawableLeft="@drawable/googleloginbuttonicon"
+        android:text="Connect with Google"
+        android:textColor="#ffffff"
+        android:background="#D93725"
+        android:drawablePadding="-18dp"
+         android:textAllCaps="false"
+         />
+    </FrameLayout>
+
+     <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp" 
+        android:id="@+id/inConnectButton"
+        android:layout_below="@id/googleFrame"
+        android:drawableLeft="@drawable/inloginbuttonicon"
+        android:text="Connect with LinkedIn"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="@dimen/Login_button_gap"
+        android:background="#007bb5"
+         android:textAllCaps="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tt"
+        android:layout_below="@+id/txt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t"
+        android:layout_below="@+id/tt"/>
+</RelativeLayout>

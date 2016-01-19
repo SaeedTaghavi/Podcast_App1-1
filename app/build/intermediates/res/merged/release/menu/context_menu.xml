@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fifteen" android:icon="@drawable/clock"
+        android:title="15 minutes" />
+    <item android:id="@+id/thirty" android:icon="@drawable/clock"
+        android:title="30 minutes" />
+    <item android:id="@+id/fourtyfive" android:icon="@drawable/clock"
+        android:title="45 minutes" />
+    <item android:id="@+id/sixty" android:icon="@drawable/clock"
+        android:title="60 minutes" />
+</menu>

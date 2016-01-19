@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="e.aakriti.work.podcast_app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- Permissions required for GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Optional permission for App measurement to run. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <receiver android:name="e.aakriti.work.breceiver.ConnectionChangeBroadCastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="e.aakriti.work.podcast_app.SENDBROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="e.aakriti.work.podcast_app.SplashActvity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+            android:name=".CategoriesActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filterandroid:theme="@style/Theme.AppCompat.NoActionBar">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name="e.aakriti.work.podcast_app.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.SettingsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.CategoryEpisodeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.CategoriesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.QuestionListingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!--
+        <activity
+            android:name=".SplashActvity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.projectemplate.musicpro.activity.SongListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.projectemplate.musicpro.activity.DownloadUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service android:name="com.projectemplate.musicpro.service.MusicService" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="17887ee8954e7cdb25df336a9a4f7332506ecf1b" />
+
+        <activity
+            android:name="e.aakriti.work.podcast_app.User_details"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="e.aakriti.work.podcast_app.OffLineModeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.Favourites"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="e.aakriti.work.podcast_app.SCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="e.aakriti.work.podcast_app.Search" >
+        </activity>
+        <activity android:name="e.aakriti.work.podcast_app.Who_To_Follow" >
+        </activity>
+        <activity android:name="e.aakriti.work.podcast_app.PlayList" >
+        </activity>
+        <activity
+            android:name="com.digits.sdk.android.PhoneNumberActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.ConfirmationCodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.LoginCodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.PinCodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.FailureActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android" />
+        <activity
+            android:name="com.digits.sdk.android.ContactsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.digits.sdk.android.EmailRequestActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.PhoneNumberActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.ConfirmationCodeActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.LoginCodeActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.FailureActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android" />
+        <activity
+            android:name="com.digits.sdk.android.ContactsActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.digits.sdk.android.PinCodeActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.EmailRequestActionBarActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+
+        <service
+            android:name="com.digits.sdk.android.ContactsUploadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.OAuthActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:icon="@drawable/tw__transparent"
+            android:label="@string/kit_name" />
+        <activity
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
+            android:theme="@style/Theme.IAPTheme" />
+        <activity
+            android:name="com.google.android.gms.appinvite.PreviewActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppInvite.Preview" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="e.aakriti.work.podcast_app.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

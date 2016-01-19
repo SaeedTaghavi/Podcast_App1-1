@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout.FillWidthHeight.Vertical"
+    android:gravity="center"
+    android:background="#0bbb"
+    tools:context=".fragment.PlayerThumbFragment" >
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/llInfo"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/imgSong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_image" />
+
+        <!--  <ImageView
+             android:id="@+id/imgSong"
+             android:layout_width="@dimen/player_thumb_imgSong"
+             android:layout_height="@dimen/player_thumb_imgSong"
+             android:layout_centerInParent="true"
+             android:contentDescription="@string/app_name"
+             android:scaleType="centerInside"
+             android:src="@drawable/ic_music_node" />
+
+         <ImageView
+             style="@style/Layout.WrapWidthHeight"
+             android:layout_centerHorizontal="true"
+             android:layout_centerInParent="true"
+             android:contentDescription="@string/app_name"
+             android:src="@drawable/bg_thumnail" /> -->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        style="@style/Layout.FillWidth.Vertical"
+        android:background="#7000"
+        android:layout_alignParentBottom="true"
+
+        android:padding="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/btnShare"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:src="@drawable/share123white" />
+
+            <ImageView
+                android:id="@+id/btnfav"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/heart" />
+            <ImageView
+                android:id="@+id/btncomment"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:src="@drawable/comment123white" />
+
+            <ImageView
+                android:id="@+id/btnplaylist"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/playlist123white" />
+            <ImageView
+                android:id="@+id/btnDownload"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:src="@drawable/download123white" />
+
+
+        </LinearLayout>
+
+        <!--   <View
+              android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:layout_marginLeft="40dp"
+              android:layout_marginRight="40dp"
+              android:background="@android:color/white" /> -->
+
+        <TextView
+            android:id="@+id/lblNameSong"
+            style="@style/Text.Title.White"
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblArtist"
+            style="@style/Text.Title.White"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:ellipsize="marquee"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever" />
+    </LinearLayout>
+
+</RelativeLayout>

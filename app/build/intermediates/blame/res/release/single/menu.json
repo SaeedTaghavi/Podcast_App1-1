@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/res/merged/release/menu/context_menu.xml",
+        "source": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/src/main/res/menu/context_menu.xml"
+    },
+    {
+        "merged": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/res/merged/release/menu/menu.xml",
+        "source": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/src/main/res/menu/menu.xml"
+    },
+    {
+        "merged": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/build/intermediates/res/merged/release/menu/main.xml",
+        "source": "/home/uadmin/AndroidStudioProjects/Podcast_App1/app/src/main/res/menu/main.xml"
+    }
+]
